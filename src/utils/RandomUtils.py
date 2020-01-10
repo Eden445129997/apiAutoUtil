@@ -1,7 +1,10 @@
-# coding:utf-8
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 import random
 import time
 import json
+
+
 class randomUtils():
     """ 随机工具类
     """

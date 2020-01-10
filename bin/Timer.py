@@ -1,7 +1,10 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 import os
 import time
-from apiAutoUtil.config.path import binPath
-from apiAutoUtil.src.utils.Log import log
+from config.path import binPath
+from src.utils.Log import log
 
 class timer():
     def __init__(self,startTime="09:00"):

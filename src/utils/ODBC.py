@@ -1,6 +1,7 @@
-# coding:utf-8
-from apiAutoUtil.config.gloVar import globalDataBase
-from apiAutoUtil.src.utils.Log import log
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+from config.gloVar import globalDataBase
+from src.utils.Log import log
 import pymysql
 
 

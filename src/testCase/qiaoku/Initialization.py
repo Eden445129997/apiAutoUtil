@@ -226,6 +226,6 @@ if __name__ == '__main__':
     # print(rmToken(15361899636))
 
     # 登录，获取验证码
-    userId,accessToken = login(15361899636,5183)
+    userId, accessToken = login(15361899636)
     print(userId,accessToken)
     pass

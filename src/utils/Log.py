@@ -1,6 +1,7 @@
-# coding=UTF-8
-import logging                                                                                                         #标准库,日志包
-from apiAutoUtil.config.path import logPath                                                                            #自用包,路径模块
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+import logging  # 标准库,日志包
+from config.path import logPath  # 自用包,路径模块
 import time
 
 '''
@@ -15,38 +16,38 @@ import time
     debug
 '''
 
-class log(object):
 
+class log(object):
     __instance = None
     __logName = "testTask_"
 
     # 单例设计模式，并且存在该数据库存在在ini配置文件中（得加锁）
     def __new__(cls, *args, **kwargs):
         if not cls.__instance:
-            cls.__instance = super(log,cls).__new__(cls)
+            cls.__instance = super(log, cls).__new__(cls)
         return cls.__instance
 
-    def __init__(self,fileName=__logName):
-        now = time.strftime('%Y-%m-%d',time.localtime())
+    def __init__(self, fileName=__logName):
+        now = time.strftime('%Y-%m-%d', time.localtime())
         self.filename = fileName + now + ".log"
 
-    def setMsg(self,Level,*args, **kwargs):
+    def setMsg(self, Level, *args, **kwargs):
 
-        logname = logPath() + self.filename                                                                             #(路径+文件名)
-        fmt = logging.Formatter("%(asctime)s %(levelname)-8s:%(message)s")                                         #创建日志格式对象
+        logname = logPath() + self.filename  # (路径+文件名)
+        fmt = logging.Formatter("%(asctime)s %(levelname)-8s:%(message)s")  # 创建日志格式对象
 
-        logger = logging.getLogger()                                                                                    #创建获取日志对象
-        fh = logging.FileHandler(logname)                                                                               #输出日志对象
-        sh = logging.StreamHandler()                                                                                    #输出日志控制台
+        logger = logging.getLogger()  # 创建获取日志对象
+        fh = logging.FileHandler(logname)  # 输出日志对象
+        sh = logging.StreamHandler()  # 输出日志控制台
 
-        fh.setFormatter(fmt)                                                                                            #定义日志对象写入日志格式
-        sh.setFormatter(fmt)                                                                                            #定义控制台写入日志格式
+        fh.setFormatter(fmt)  # 定义日志对象写入日志格式
+        sh.setFormatter(fmt)  # 定义控制台写入日志格式
 
-        #添加日志处理器
+        # 添加日志处理器
         logger.addHandler(fh)
         logger.addHandler(sh)
 
-        logger.setLevel(logging.INFO)                                                                                   #添加日志信息，输出INFO级别的日志信息
+        logger.setLevel(logging.INFO)  # 添加日志信息，输出INFO级别的日志信息
 
         if Level == "debug":
             logger.debug(*args, **kwargs)
@@ -57,22 +58,26 @@ class log(object):
         elif Level == "error":
             logger.error(*args, **kwargs)
 
-        #移除日志输出平台，避免重复写入
+        # 移除日志输出平台，避免重复写入
         logger.removeHandler(fh)
         logger.removeHandler(sh)
         fh.close()
 
-    def debug(self,*args, **kwargs):
-        self.setMsg('debug',*args, **kwargs)
-    def info(self,*args, **kwargs):
-        self.setMsg('info',*args, **kwargs)
-    def warning(self,*args, **kwargs):
-        self.setMsg('warning',*args, **kwargs)
-    def error(self,*args, **kwargs):
-        self.setMsg('error',*args, **kwargs)
+    def debug(self, *args, **kwargs):
+        self.setMsg('debug', *args, **kwargs)
+
+    def info(self, *args, **kwargs):
+        self.setMsg('info', *args, **kwargs)
+
+    def warning(self, *args, **kwargs):
+        self.setMsg('warning', *args, **kwargs)
+
+    def error(self, *args, **kwargs):
+        self.setMsg('error', *args, **kwargs)
+
 
 if __name__ == '__main__':
-    l = log("aaa_")               #创建日志对象，定义日志文件名称
-    l.error({"app-http1":"app-http1"})
+    l = log("aaa_")  # 创建日志对象，定义日志文件名称
+    l.error({"app-http1": "app-http1"})
     l.info("test2")
     l.warning("sss")

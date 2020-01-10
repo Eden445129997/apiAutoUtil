@@ -1,5 +1,6 @@
-# coding:utf-8
-from apiAutoUtil.src.utils.Log import log
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+from src.utils.Log import log
 import json
 import requests
 

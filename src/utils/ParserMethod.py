@@ -1,6 +1,7 @@
-# coding:utf-8
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 import configparser
-from apiAutoUtil.config.path import dataPath
+from config.path import dataPath
 
 class parserMethod(object):
     """a为追加模式，w为覆盖模式，b为二进制模式"""

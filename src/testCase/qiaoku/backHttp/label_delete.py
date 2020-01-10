@@ -2,7 +2,6 @@
 import unittest
 
 from apiAutoUtil.src.testCase.qiaoku.Initialization import login
-from apiAutoUtil.src.testCase.qiaoku.Initialization import deleteData
 from apiAutoUtil.src.testCase.qiaoku.interfaceObject import backHttp
 
 

@@ -1,7 +1,9 @@
-# coding:utf-8
-from apiAutoUtil.src.utils.Log import log
-from apiAutoUtil.src.utils.GetRequest import merge,splitUrl
-from apiAutoUtil.config.gloVar import globalEnvironment
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+from src.utils.Log import log
+from src.utils.GetRequest import merge, splitUrl
+from config.gloVar import globalEnvironment
 import json
 import requests
 
@@ -26,7 +28,7 @@ def postRequest(func):
         # 如果是字典类型，则Json序列化
         if isinstance(data,dict):
             try:
-                data = json.dumps(data)
+                data = json.dumps(data, ensure_ascii=False)
             except:
                 setLog.info("失败代码：data = json.dumps(data)" )
                 setLog.info("失败json序列化参数：" + data)
@@ -107,6 +109,8 @@ def getRequest(func):
 
             # 尝试解析成Json格式返回
             try:
+                # ensure_ascii=False尝试汉字编码正常转换显示
+                # result = json.loads(response.text,ensure_ascii=False)
                 result = json.loads(response.text)
                 return result
             # Text格式返回

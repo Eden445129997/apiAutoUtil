@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 import os
 
 def binPath():
@@ -53,4 +56,4 @@ def qiaokuInterfaceObject():
 #     return test_suit_path
 
 if __name__ == '__main__':
-    print(qiaokuInterfaceObject())
+    print(configPath())

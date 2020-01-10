@@ -1,7 +1,9 @@
-# coding:utf-8
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 import requests
 import json
-from apiAutoUtil.src.utils.Log import log
+from src.utils.Log import log
 
 # 将url地址和字典参数合并
 def merge(url,data):
