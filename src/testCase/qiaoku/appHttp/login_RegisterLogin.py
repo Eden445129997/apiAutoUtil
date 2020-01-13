@@ -1,7 +1,7 @@
 import unittest
 import time
 
-from apiAutoUtil.src.testCase.qiaoku.interfaceObject.app_http import RegisterLoginApi as LoginApi
+from src.testCase.qiaoku.interfaceObject.app_http import RegisterLoginApi as LoginApi
 
 
 class registerLogin(unittest.TestCase):

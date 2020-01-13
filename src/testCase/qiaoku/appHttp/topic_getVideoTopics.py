@@ -1,11 +1,10 @@
 # coding=UTF-8
 import unittest
 
-from apiAutoUtil.src.testCase.qiaoku.interfaceObject.app_http import RegisterLoginApi as LoginApi
-from apiAutoUtil.src.testCase.qiaoku.interfaceObject.app_http import TopicApi
+from src.testCase.qiaoku.api_obj import topic_getVideoTopics
 
 
-class topic_getVideoTopics(unittest.TestCase):
+class getVideoTopics(unittest.TestCase):
     """话题-全部话题列表"""
     #初始化
     def setUp(self):
@@ -13,7 +12,7 @@ class topic_getVideoTopics(unittest.TestCase):
         # deleteData(self.userPhone)
 
         # token
-        self.token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1Njg1MDg2NzAsInVzZXJJZCI6NjIxNzc1NDU1MzA0ODEwNDk2LCJpc3MiOiJxaWFva3UifQ.dpnceZSaXpVYbY4zp_z8yIlCGuarR-c-n4AjvlcRf7k"
+        self.token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1Nzg3MDc1NzMsInVzZXJJZCI6MzgyMTksInVzZXJQbGF0Zm9ybSI6ImFwcCIsInVkaWQiOiI5Rjk1NzU5OTQ0RDBENkQxRTM0M0QxMjJGNDQ2QjQ4ODc2Rjg2OTQ2IiwiaXNzIjoicWlhb2t1In0.D5pcfIP2P4_iSbgFU1IXh2Hp-0H56CyTVigMW607drc"
 
     def tearDown(self):
         pass
@@ -33,7 +32,7 @@ class topic_getVideoTopics(unittest.TestCase):
             "pageSize":10,
             "type":1
         }
-        TopicApi.getVideoTopics(data,self.token)
+        topic_getVideoTopics(data,self.token)
 
     def b(self):
         """获取热门话题列表"""
@@ -42,7 +41,7 @@ class topic_getVideoTopics(unittest.TestCase):
             "pageSize":100,
             "type":2
         }
-        TopicApi.getVideoTopics(data,self.token)
+        topic_getVideoTopics(data,self.token)
 
     def c(self):
         """不带token"""
@@ -51,7 +50,7 @@ class topic_getVideoTopics(unittest.TestCase):
             "pageSize":10,
             "type":1
         }
-        TopicApi.getVideoTopics(data)
+        topic_getVideoTopics(data)
 
 if __name__ == '__main__':
     unittest.main()

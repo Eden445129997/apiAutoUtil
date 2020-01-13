@@ -1,8 +1,8 @@
 import unittest
 
-from apiAutoUtil.src.utils.ODBC import odbc
-from apiAutoUtil.src.testCase.qiaoku.Initialization import deleteData
-from apiAutoUtil.src.testCase.qiaoku.interfaceObject.back_http.BackLiveApi import backLiveApi
+from src.utils.ODBC import odbc
+from src.testCase.qiaoku.Initialization import deleteData
+from src.testCase.qiaoku.interfaceObject.back_http.BackLiveApi import backLiveApi
 
 class createPlayer(unittest.TestCase):
     """敲酷手机验证码登录"""

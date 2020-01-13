@@ -23,6 +23,19 @@ def PingCmd(ip):
             return True
     return False
 
+# 本地环境装饰器
+def localhostEnvironment(func):
+    def outter_wrapper(*args, **kwargs):
+        @wraps(func)
+        def inner_wrapper(*args, **kwargs):
+            __ip = r"http://10.113.248.142"
+            __port = r":8801"
+            return __ip, __port
+
+        return func(inner_wrapper)
+
+    return outter_wrapper
+
 
 # 生产环境装饰器
 def productionEnvironment(func):
@@ -66,15 +79,3 @@ def xiaomubiaoEnvironment(func):
     return outter_wrapper
 
 
-# 石杰的服务器
-def shijieEnvironment(func):
-    def outter_wrapper(*args, **kwargs):
-        @wraps(func)
-        def inner_wrapper(*args, **kwargs):
-            __ip = r"http://10.113.248.67"
-            __port = r":8771"
-            return __ip, __port
-
-        return func(inner_wrapper)
-
-    return outter_wrapper

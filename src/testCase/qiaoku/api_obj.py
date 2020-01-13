@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-from apiAutoUtil.src.utils.Decorator import getRequest
-from apiAutoUtil.src.utils.Decorator import postRequest
+from src.utils.Decorator import getRequest
+from src.utils.Decorator import postRequest
 
 @postRequest
 def mcnInfo_updateTbMcnInfo():
