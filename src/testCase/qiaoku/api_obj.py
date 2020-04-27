@@ -1846,11 +1846,6 @@ def effects_listSubjects():
 @postRequest
 def audit_user_report():
     """审核平台：用户信息上报"""
-    return "/user/report"
-
-@postRequest
-def audit_user_report():
-    """审核平台：用户信息上报"""
     return "/back-http/user/report"
 
 @postRequest

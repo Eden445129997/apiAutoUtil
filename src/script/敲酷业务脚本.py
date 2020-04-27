@@ -215,16 +215,21 @@ def removePunish(userPhone=None,userId=None):
 def successPassVideoInitialCheck():
     """视频审核通过"""
     data = {
-
-        "id":"313",
+        # 视频审核ID
+        "id":"427",
+        # 视频分类ID
         "categoryId":"4",
+        # 标签列表
         "labels":["15"],
+        # 视频定级
         "videoLevel":"b",
-        "videoId":"692749282697785344",
+        "videoId":"704378332622258176",
+        #
         "videoTopicId":43,
 
     }
-    token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODUxMjI2NjAsImJhY2tfdXNlcl9pZCI6NDMsImlzcyI6InFpYW9rdV9iYWNrIn0.MiwfiCxibdsJ0z6OhZK79HIfN4zuZYP2SrY-02f-e5M"
+    token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODc4MDYwMDUsImJhY2tfdXNlcl9pZCI6NDMsImlzcyI6InFpYW9rdV9iYWNrIn0.zD2II7nLGMSaLev1a2nCD6LJAtsX9eFeYF8-5fYdfwE"
+
     response = api_obj.videosuccessPassVideoInitialCheck(data,token)
 
     return True
@@ -284,7 +289,7 @@ def test():
 if __name__ == '__main__':
     # test()
     # 审核通过
-    # successPassVideoInitialCheck()
+    successPassVideoInitialCheck()
     # 审核不通过
     # failPassVideoInitialCheck()
     # 登录
@@ -292,18 +297,18 @@ if __name__ == '__main__':
     # userId,token = login(15658850486)
 
     # 自动登录
-    for i in range(100):
-        phone_num = getPhoneNum()
-        userId,accessToken,udid = autoLogin(phone_num)
-        with open (os.path.dirname(os.path.abspath(__file__)) + "\\" + "token.txt", 'a',encoding='utf-8') as fp:
-            fp.write (accessToken + "\n")
-            fp.flush()
-            fp.close()
+    # for i in range(100):
+    #     phone_num = getPhoneNum()
+    #     userId,accessToken,udid = autoLogin(phone_num)
+    #     with open (os.path.dirname(os.path.abspath(__file__)) + "\\" + "token.txt", 'a',encoding='utf-8') as fp:
+    #         fp.write (accessToken + "\n")
+    #         fp.flush()
+    #         fp.close()
 
     # print(userId,accessToken)
     # 从数据库获取视频id
 
-    videoid = getVideoId()
+    # videoid = getVideoId()
     # for i in range(100):
     #     for i in videoid:
     #         with open (os.path.dirname(os.path.abspath(__file__)) + "\\" + "videoId.txt", 'a',encoding='utf-8') as fp:

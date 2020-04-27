@@ -1,7 +1,7 @@
 import unittest
-from apiAutoUtil.config.path import dataPath
-from apiAutoUtil.src.utils.ParserIni import parserMethod
-from apiAutoUtil.src.utils.GetRequest import noneParams
+from config.path import dataPath
+from src.utils.ParserIni import parserMethod
+from src.utils.GetRequest import noneParams
 
 
 class tryTest(unittest.TestCase):

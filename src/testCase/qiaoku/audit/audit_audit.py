@@ -21,9 +21,9 @@ class audit(unittest.TestCase):
 
     def test(self):
         # 初始化应用
-        self.app_info_init()
+        # self.app_info_init()
         # 获取用户消息列表
-        # self.user_report()
+        self.user_report()
         # self.room_report()
         # self.live_report()
 

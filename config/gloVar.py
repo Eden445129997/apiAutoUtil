@@ -10,7 +10,7 @@ import redis
 
 # import pymysql
 
-@environment.autitEnvironment
+@environment.testEnvironment
 def globalEnvironment(env):
     """使用装饰器的方式，定义服务器环境"""
     setLog = log()

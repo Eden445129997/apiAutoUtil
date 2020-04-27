@@ -42,3 +42,26 @@
 2020-04-27 11:35:36,989 INFO    :请求头：{'platform': 'ios', 'userPlatform': 'app', 'version': '1.0.6', 'Content-Type': 'application/json;charset=utf-8', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODQ1OTc4NzcsInVzZXJJZCI6NjI3NDcyNDgxMjI5MjA5NjAwLCJ1c2VyUGxhdGZvcm0iOiJhcHAiLCJ1ZGlkIjoibG9naW4iLCJpc3MiOiJxaWFva3UifQ.Bw1ytO1nOZ3hPxuY3ZHR62qUvanTDJwJhUFNv49zld0', 'auth': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODQ1OTc4NzcsInVzZXJJZCI6NjI3NDcyNDgxMjI5MjA5NjAwLCJ1c2VyUGxhdGZvcm0iOiJhcHAiLCJ1ZGlkIjoibG9naW4iLCJpc3MiOiJxaWFva3UifQ.Bw1ytO1nOZ3hPxuY3ZHR62qUvanTDJwJhUFNv49zld0'}
 2020-04-27 11:35:36,990 INFO    :请求体：{"appName": "eden_test"}
 2020-04-27 11:35:36,990 INFO    :响应体：{'code': 200, 'message': '请求成功', 'timestamp': '1587958538189', 'requestId': '9f5629a3-86c1-4ea4-a292-c2030a87eec2', 'data': {'id': '1254615159008219137', 'createTime': None, 'lastUpdateTime': None, 'appId': 'eden_test', 'appSecret': '8fdf823b3bebd258dddfe1ff71e2cf0893bbaa2b'}, 'total': '0'}
+2020-04-27 16:09:04,087 INFO    :接口访问成功，url：http://10.113.248.209:80/back-http/user/report
+2020-04-27 16:09:04,087 INFO    :请求头：{'platform': 'ios', 'userPlatform': 'app', 'version': '1.0.6', 'Content-Type': 'application/json;charset=utf-8', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODQ1OTc4NzcsInVzZXJJZCI6NjI3NDcyNDgxMjI5MjA5NjAwLCJ1c2VyUGxhdGZvcm0iOiJhcHAiLCJ1ZGlkIjoibG9naW4iLCJpc3MiOiJxaWFva3UifQ.Bw1ytO1nOZ3hPxuY3ZHR62qUvanTDJwJhUFNv49zld0', 'auth': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODQ1OTc4NzcsInVzZXJJZCI6NjI3NDcyNDgxMjI5MjA5NjAwLCJ1c2VyUGxhdGZvcm0iOiJhcHAiLCJ1ZGlkIjoibG9naW4iLCJpc3MiOiJxaWFva3UifQ.Bw1ytO1nOZ3hPxuY3ZHR62qUvanTDJwJhUFNv49zld0'}
+2020-04-27 16:09:04,087 INFO    :请求体：{"appId": "eden", "appSecret": "123456789", "callback": "http://10.113.248.142:9998/platform/test/", "btId": "h48np7pvjw", "type": "AVATAR", "userId": "123456789", "content": "http://didongpic.didongkj.com/1585896083549.png"}
+2020-04-27 16:09:04,088 INFO    :响应体：{'code': 200, 'message': '请求成功', 'timestamp': '1587974944143', 'requestId': '6b6b8e83-d0ab-4c6c-b324-fcea046a4170', 'data': {'machineStatus': 2, 'riskLabel': '正常', 'score': 0, 'btId': 'h48np7pvjw'}, 'total': '0'}
+2020-04-27 17:36:49,711 INFO    :接口访问成功，url：http://10.113.248.209:80/back-http/video/successPassVideoInitialCheck
+2020-04-27 17:36:49,712 INFO    :请求头：{'platform': 'ios', 'userPlatform': 'app', 'version': '1.0.6', 'Content-Type': 'application/json;charset=utf-8', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODc4MDYwMDUsImJhY2tfdXNlcl9pZCI6NDMsImlzcyI6InFpYW9rdV9iYWNrIn0.zD2II7nLGMSaLev1a2nCD6LJAtsX9eFeYF8-5fYdfwE', 'auth': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODc4MDYwMDUsImJhY2tfdXNlcl9pZCI6NDMsImlzcyI6InFpYW9rdV9iYWNrIn0.zD2II7nLGMSaLev1a2nCD6LJAtsX9eFeYF8-5fYdfwE'}
+2020-04-27 17:36:49,712 INFO    :请求体：{"id": "427", "categoryId": "4", "labels": ["15"], "videoLevel": "b", "videoId": "704378332622258176", "videoTopicId": 43}
+2020-04-27 17:36:49,712 INFO    :响应体：<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.16.1</center>
+</body>
+</html>
+
+2020-04-27 17:38:46,677 INFO    :接口访问成功，url：http://10.113.248.203:80/back-http/video/successPassVideoInitialCheck
+2020-04-27 17:38:46,678 INFO    :请求头：{'platform': 'ios', 'userPlatform': 'app', 'version': '1.0.6', 'Content-Type': 'application/json;charset=utf-8', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODc4MDYwMDUsImJhY2tfdXNlcl9pZCI6NDMsImlzcyI6InFpYW9rdV9iYWNrIn0.zD2II7nLGMSaLev1a2nCD6LJAtsX9eFeYF8-5fYdfwE', 'auth': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODc4MDYwMDUsImJhY2tfdXNlcl9pZCI6NDMsImlzcyI6InFpYW9rdV9iYWNrIn0.zD2II7nLGMSaLev1a2nCD6LJAtsX9eFeYF8-5fYdfwE'}
+2020-04-27 17:38:46,678 INFO    :请求体：{"id": "427", "categoryId": "4", "labels": ["15"], "videoLevel": "b", "videoId": "704378332622258176", "videoTopicId": 43}
+2020-04-27 17:38:46,679 INFO    :响应体：{'code': 200, 'message': '操作成功', 'data': {'id': 427, 'userId': None, 'videoId': 704378332622258176, 'categoryId': 4, 'labels': [15], 'videoLevel': 'b', 'chkType': None, 'videoTopicId': 43, 'canChk': None, 'backUserId': 43, 'delFlag': None}, 'totalElement': 0}
+2020-04-27 17:39:58,034 INFO    :接口访问成功，url：http://10.113.248.203:80/back-http/video/successPassVideoInitialCheck
+2020-04-27 17:39:58,035 INFO    :请求头：{'platform': 'ios', 'userPlatform': 'app', 'version': '1.0.6', 'Content-Type': 'application/json;charset=utf-8', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODc4MDYwMDUsImJhY2tfdXNlcl9pZCI6NDMsImlzcyI6InFpYW9rdV9iYWNrIn0.zD2II7nLGMSaLev1a2nCD6LJAtsX9eFeYF8-5fYdfwE', 'auth': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODc4MDYwMDUsImJhY2tfdXNlcl9pZCI6NDMsImlzcyI6InFpYW9rdV9iYWNrIn0.zD2II7nLGMSaLev1a2nCD6LJAtsX9eFeYF8-5fYdfwE'}
+2020-04-27 17:39:58,035 INFO    :请求体：{"id": "427", "categoryId": "4", "labels": ["15"], "videoLevel": "b", "videoId": "704378332622258176", "videoTopicId": 43}
+2020-04-27 17:39:58,036 INFO    :响应体：{'code': 500, 'message': '服务器出错啦', 'data': None, 'totalElement': 0}
