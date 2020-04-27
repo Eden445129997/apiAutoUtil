@@ -23,13 +23,29 @@ def PingCmd(ip):
             return True
     return False
 
+
+
+# 本地环境装饰器
+def betaEnvironment(func):
+    def outter_wrapper(*args, **kwargs):
+        @wraps(func)
+        def inner_wrapper(*args, **kwargs):
+            __ip = r"https://beta.didongkj.com"
+            __port = r""
+            return __ip, __port
+
+        return func(inner_wrapper)
+
+    return outter_wrapper
+
+
 # 本地环境装饰器
 def localhostEnvironment(func):
     def outter_wrapper(*args, **kwargs):
         @wraps(func)
         def inner_wrapper(*args, **kwargs):
-            __ip = r"http://10.113.248.142"
-            __port = r":8801"
+            __ip = r"http://47.105.175.129"
+            __port = r":8802"
             return __ip, __port
 
         return func(inner_wrapper)
@@ -43,7 +59,7 @@ def productionEnvironment(func):
         @wraps(func)
         def inner_wrapper(*args, **kwargs):
             __ip = r"http://10.113.248.204"
-            __port = r":8771"
+            __port = r":8801"
             return __ip, __port
 
         return func(inner_wrapper)
@@ -71,7 +87,7 @@ def xiaomubiaoEnvironment(func):
         @wraps(func)
         def inner_wrapper(*args, **kwargs):
             __ip = r"http://10.113.248.86"
-            __port = r":8771"
+            __port = r":7786"
             return __ip, __port
 
         return func(inner_wrapper)
@@ -79,3 +95,14 @@ def xiaomubiaoEnvironment(func):
     return outter_wrapper
 
 
+def autitEnvironment(func):
+    def outter_wrapper(*args, **kwargs):
+        @wraps(func)
+        def inner_wrapper(*args, **kwargs):
+            __ip = r"http://10.113.248.209"
+            __port = r":80"
+            return __ip, __port
+
+        return func(inner_wrapper)
+
+    return outter_wrapper

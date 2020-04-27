@@ -5,7 +5,7 @@ import requests
 import json
 from src.utils.Log import log
 
-class deleteMethod(object):
+class delete_method(object):
     """
     # 当resultJson
     # True则格式化成Json格式返回

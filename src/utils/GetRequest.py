@@ -12,8 +12,10 @@ def merge(url,data):
         url = url + "&" + i + "=" + str(data[i])
     return url
 
-# 获取get请求，并将参数转换成字典
 def splitUrl(url):
+    """获取get请求，并将参数转换成字典"""
+    # ip:port/path
+    # params
     params = ""
     data = {}
 
@@ -68,7 +70,8 @@ def noneParams(url,headers=None):
             result = response.text
             return result
         finally:
-            setLog.info(r"接口访问成功，url：" + str(splitUrl(url)[0]))
+            # setLog.info(r"接口访问成功，url：" + str(splitUrl(url)[0]))
+            setLog.info(r"接口访问成功，url：" + url)
             setLog.info(r"请求头：" + str(headers))
             setLog.info(r"请求参：" + str(splitUrl(url)[1]))
             setLog.info(r"响应体：" + str(result))

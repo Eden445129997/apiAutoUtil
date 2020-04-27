@@ -10,7 +10,7 @@ def binPath():
 
 def configPath():
     '''配置路径'''
-    configPath = os.path.dirname(os.path.abspath(__file__))
+    configPath = os.path.dirname(os.path.abspath(__file__)) + "\\"
     return configPath
 
 def dataPath():

@@ -1596,12 +1596,12 @@ def videoPlay_saveVideoShare():
 @getRequest
 def videofailPassVideoInitialCheck():
     """视频初审不通过接口"""
-    return "/video/failPassVideoInitialCheck"
+    return "/back-http/video/failPassVideoInitialCheck"
 
 @postRequest
 def videosuccessPassVideoInitialCheck():
     """视频初审通过接口"""
-    return "/video/successPassVideoInitialCheck"
+    return "/back-http/video/successPassVideoInitialCheck"
 
 @getRequest
 def videofailPassVideoSecondCheck():
@@ -1798,3 +1798,71 @@ def music_sortMusicType():
     """音乐类型排序"""
     return "/back-http/music/sortMusicType"
 
+@postRequest
+def collection_save():
+    """创建合集"""
+    return "/app-http/v105/collection/save"
+
+@postRequest
+def collection_delete():
+    """删除合集"""
+    return "/app-http/v105/collection/delete"
+
+@postRequest
+def collection_updateCollectionToVideo():
+    """app端修改合集中的视频"""
+    return "/app-http/v105/collection/updateCollectionToVideo"
+
+@postRequest
+def collection_update():
+    """app端修改合集(封面和名称)"""
+    return "/app-http/v105/collection/update"
+
+@postRequest
+def collection_getUserCollection():
+    """获取用户合集"""
+    return "/app-http/v105/collection/getUserCollection"
+
+@postRequest
+def collection_getCollectionInfo():
+    """获取合集内容"""
+    return "/app-http/v105/collection/getCollectionInfo"
+
+@postRequest
+def collection_getCollectionVideo():
+    """获取合集预选视频列表"""
+    return "/app-http/v105/collection/getCollectionVideo"
+
+@postRequest
+def collection_getHomeCollection():
+    """获取首页合集"""
+    return "/app-http/v105/collection/getHomeCollection"
+
+@getRequest
+def effects_listSubjects():
+    """获取主题列表"""
+    return "/app-http/effects/listSubjects"
+
+@postRequest
+def audit_user_report():
+    """审核平台：用户信息上报"""
+    return "/user/report"
+
+@postRequest
+def audit_user_report():
+    """审核平台：用户信息上报"""
+    return "/back-http/user/report"
+
+@postRequest
+def audit_room_report():
+    """审核平台：酒局上报"""
+    return "/back-http/room/report"
+
+@postRequest
+def audit_live_report():
+    """审核平台：酒局直播上报"""
+    return "/back-http/live/report"
+
+@postRequest
+def audit_appInfo_init():
+    return "/back-http/appInfo/init"

@@ -1,6 +1,6 @@
 import unittest
 from apiAutoUtil.config.path import dataPath
-from apiAutoUtil.src.utils.ParserMethod import parserMethod
+from apiAutoUtil.src.utils.ParserIni import parserMethod
 from apiAutoUtil.src.utils.GetRequest import noneParams
 
 
@@ -10,13 +10,12 @@ class tryTest(unittest.TestCase):
     def setUp(self):
         global data,request
         #创建输入流对象
-        inputStream = parserMethod(dataPath() + "url.ini")
+        inputStream = parserMethod(dataPath() + "url(已废除).ini")
         #获取数据
         data = inputStream.getData("weather","weatherid")
 
     """执行测试用例阶段"""
     def testWeather(self):
-        request.changResultJsonTo_false()
         print(noneParams(data))
 
     """执行用例后需要执行的操作"""

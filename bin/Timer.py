@@ -32,5 +32,18 @@ class timer():
 
 if __name__ == '__main__':
     # input_time = str(input("请输入开始时间"))
-    start = timer()
-    start.timerExecute()
+    # start = timer()
+    # start.timerExecute()
+    # 字符类型的时间
+    tss1 = '2013-10-10 23:40:00'
+    # 转为时间数组
+    timeArray = time.strptime(tss1, "%Y-%m-%d %H:%M:%S")
+    print(timeArray)
+    # timeArray可以调用tm_year等
+    print(timeArray.tm_year)   # 2013
+    # 转为时间戳
+    timeStamp = int(time.mktime(timeArray))
+    print(type(timeStamp))
+    # time.struct_time(tm_year=2013, tm_mon=10, tm_mday=10, tm_hour=23, tm_min=40, tm_sec=0, tm_wday=3, tm_yday=283, tm_isdst=-1)
+    # 2013
+    # <class 'int'>

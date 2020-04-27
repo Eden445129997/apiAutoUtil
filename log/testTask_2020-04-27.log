@@ -1,0 +1,44 @@
+2020-04-27 11:29:35,777 ERROR   :路由寻址失败：
+2020-04-27 11:29:35,778 ERROR   :ip:http://10.113.248.209
+2020-04-27 11:29:35,778 ERROR   :port:
+2020-04-27 11:29:35,791 INFO    :接口访问成功，url：http://10.113.248.209/appInfo/init
+2020-04-27 11:29:35,792 INFO    :请求头：{'platform': 'ios', 'userPlatform': 'app', 'version': '1.0.6', 'Content-Type': 'application/json;charset=utf-8', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODQ1OTc4NzcsInVzZXJJZCI6NjI3NDcyNDgxMjI5MjA5NjAwLCJ1c2VyUGxhdGZvcm0iOiJhcHAiLCJ1ZGlkIjoibG9naW4iLCJpc3MiOiJxaWFva3UifQ.Bw1ytO1nOZ3hPxuY3ZHR62qUvanTDJwJhUFNv49zld0', 'auth': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODQ1OTc4NzcsInVzZXJJZCI6NjI3NDcyNDgxMjI5MjA5NjAwLCJ1c2VyUGxhdGZvcm0iOiJhcHAiLCJ1ZGlkIjoibG9naW4iLCJpc3MiOiJxaWFva3UifQ.Bw1ytO1nOZ3hPxuY3ZHR62qUvanTDJwJhUFNv49zld0'}
+2020-04-27 11:29:35,792 INFO    :请求体：{"appName": "eden_test"}
+2020-04-27 11:29:35,793 INFO    :响应体：<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.16.1</center>
+</body>
+</html>
+
+2020-04-27 11:31:06,249 INFO    :接口访问成功，url：http://10.113.248.209:80/appInfo/init
+2020-04-27 11:31:06,249 INFO    :请求头：{'platform': 'ios', 'userPlatform': 'app', 'version': '1.0.6', 'Content-Type': 'application/json;charset=utf-8', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODQ1OTc4NzcsInVzZXJJZCI6NjI3NDcyNDgxMjI5MjA5NjAwLCJ1c2VyUGxhdGZvcm0iOiJhcHAiLCJ1ZGlkIjoibG9naW4iLCJpc3MiOiJxaWFva3UifQ.Bw1ytO1nOZ3hPxuY3ZHR62qUvanTDJwJhUFNv49zld0', 'auth': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODQ1OTc4NzcsInVzZXJJZCI6NjI3NDcyNDgxMjI5MjA5NjAwLCJ1c2VyUGxhdGZvcm0iOiJhcHAiLCJ1ZGlkIjoibG9naW4iLCJpc3MiOiJxaWFva3UifQ.Bw1ytO1nOZ3hPxuY3ZHR62qUvanTDJwJhUFNv49zld0'}
+2020-04-27 11:31:06,250 INFO    :请求体：{"appName": "eden_test"}
+2020-04-27 11:31:06,250 INFO    :响应体：<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.16.1</center>
+</body>
+</html>
+
+2020-04-27 11:32:56,050 INFO    :接口访问成功，url：http://10.113.248.209:80/appInfo/init
+2020-04-27 11:32:56,051 INFO    :请求头：{'platform': 'ios', 'userPlatform': 'app', 'version': '1.0.6', 'Content-Type': 'application/json;charset=utf-8', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODQ1OTc4NzcsInVzZXJJZCI6NjI3NDcyNDgxMjI5MjA5NjAwLCJ1c2VyUGxhdGZvcm0iOiJhcHAiLCJ1ZGlkIjoibG9naW4iLCJpc3MiOiJxaWFva3UifQ.Bw1ytO1nOZ3hPxuY3ZHR62qUvanTDJwJhUFNv49zld0', 'auth': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODQ1OTc4NzcsInVzZXJJZCI6NjI3NDcyNDgxMjI5MjA5NjAwLCJ1c2VyUGxhdGZvcm0iOiJhcHAiLCJ1ZGlkIjoibG9naW4iLCJpc3MiOiJxaWFva3UifQ.Bw1ytO1nOZ3hPxuY3ZHR62qUvanTDJwJhUFNv49zld0'}
+2020-04-27 11:32:56,051 INFO    :请求体：{"appName": "adfa"}
+2020-04-27 11:32:56,051 INFO    :响应体：<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.16.1</center>
+</body>
+</html>
+
+2020-04-27 11:34:55,290 INFO    :接口访问成功，url：http://10.113.248.209:80/back-http/appInfo/init
+2020-04-27 11:34:55,290 INFO    :请求头：{'platform': 'ios', 'userPlatform': 'app', 'version': '1.0.6', 'Content-Type': 'application/json;charset=utf-8', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODQ1OTc4NzcsInVzZXJJZCI6NjI3NDcyNDgxMjI5MjA5NjAwLCJ1c2VyUGxhdGZvcm0iOiJhcHAiLCJ1ZGlkIjoibG9naW4iLCJpc3MiOiJxaWFva3UifQ.Bw1ytO1nOZ3hPxuY3ZHR62qUvanTDJwJhUFNv49zld0', 'auth': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODQ1OTc4NzcsInVzZXJJZCI6NjI3NDcyNDgxMjI5MjA5NjAwLCJ1c2VyUGxhdGZvcm0iOiJhcHAiLCJ1ZGlkIjoibG9naW4iLCJpc3MiOiJxaWFva3UifQ.Bw1ytO1nOZ3hPxuY3ZHR62qUvanTDJwJhUFNv49zld0'}
+2020-04-27 11:34:55,291 INFO    :请求体：{"appName": "adfa"}
+2020-04-27 11:34:55,291 INFO    :响应体：{'code': 200, 'message': '请求成功', 'timestamp': '1587958496482', 'requestId': '4559128f-b7aa-4849-95c7-027c3d46f8f0', 'data': {'id': '1254614983996690433', 'createTime': None, 'lastUpdateTime': None, 'appId': 'adfa', 'appSecret': '5284267ade9e74d287806e875c5f7ff5fb68e644'}, 'total': '0'}
+2020-04-27 11:35:36,989 INFO    :接口访问成功，url：http://10.113.248.209:80/back-http/appInfo/init
+2020-04-27 11:35:36,989 INFO    :请求头：{'platform': 'ios', 'userPlatform': 'app', 'version': '1.0.6', 'Content-Type': 'application/json;charset=utf-8', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODQ1OTc4NzcsInVzZXJJZCI6NjI3NDcyNDgxMjI5MjA5NjAwLCJ1c2VyUGxhdGZvcm0iOiJhcHAiLCJ1ZGlkIjoibG9naW4iLCJpc3MiOiJxaWFva3UifQ.Bw1ytO1nOZ3hPxuY3ZHR62qUvanTDJwJhUFNv49zld0', 'auth': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODQ1OTc4NzcsInVzZXJJZCI6NjI3NDcyNDgxMjI5MjA5NjAwLCJ1c2VyUGxhdGZvcm0iOiJhcHAiLCJ1ZGlkIjoibG9naW4iLCJpc3MiOiJxaWFva3UifQ.Bw1ytO1nOZ3hPxuY3ZHR62qUvanTDJwJhUFNv49zld0'}
+2020-04-27 11:35:36,990 INFO    :请求体：{"appName": "eden_test"}
+2020-04-27 11:35:36,990 INFO    :响应体：{'code': 200, 'message': '请求成功', 'timestamp': '1587958538189', 'requestId': '9f5629a3-86c1-4ea4-a292-c2030a87eec2', 'data': {'id': '1254615159008219137', 'createTime': None, 'lastUpdateTime': None, 'appId': 'eden_test', 'appSecret': '8fdf823b3bebd258dddfe1ff71e2cf0893bbaa2b'}, 'total': '0'}

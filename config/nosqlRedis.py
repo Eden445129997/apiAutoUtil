@@ -21,6 +21,22 @@ def testEnvironment(func):
 
     return outter_wrapper
 
+# 测试环境装饰器
+def betaEnvironment(func):
+    def outter_wrapper(*args, **kwargs):
+        @wraps(func)
+        def inner_wrapper(*args, **kwargs):
+            __redisConfig = {
+                "host": r"beta.didongkj.com",
+                "port": 6379,
+                "password": r"didong1904",
+                "db": 0,
+            }
+            return __redisConfig
+
+        return func(inner_wrapper)
+
+    return outter_wrapper
 
 # 开发环境装饰器
 def productionEnvironment(func):

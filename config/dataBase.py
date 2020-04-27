@@ -19,7 +19,23 @@ def testEnvironment(func):
         return func(inner_wrapper)
     return outter_wrapper
 
-# 测试环境装饰器
+# beta环境装饰器
+def betaEnvironment(func):
+    def outter_wrapper(*args,**kwargs):
+        @wraps(func)
+        def inner_wrapper(*args,**kwargs):
+            __dataBaseConfig = {
+                "host" : r"beta.didongkj.com",
+                "port" : 3306,
+                "user" : r"root",
+                "password" : r"didong1904",
+                "charset" : r"utf8",
+            }
+            return __dataBaseConfig
+        return func(inner_wrapper)
+    return outter_wrapper
+
+# 开发环境装饰器
 def productionEnvironment(func):
     def outter_wrapper(*args,**kwargs):
         @wraps(func)
