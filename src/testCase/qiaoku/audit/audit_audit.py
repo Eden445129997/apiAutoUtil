@@ -25,7 +25,7 @@ class audit(unittest.TestCase):
         # 获取用户消息列表
         self.user_report()
         # self.room_report()
-        # self.live_report()
+        # self.live_report ()
 
     def app_info_init(self):
         data = {
@@ -59,9 +59,10 @@ class audit(unittest.TestCase):
                 "appSecret": "123456789",
                 "callback": "http://10.113.248.142:9998/platform/test/",
                 "btId": randomValue(10),
-                "type": "NAME", # 类型（RULE, NAME）
+                "type": "RULE", # 类型（RULE, NAME）
                 "userId": "123456789",
-                "content": "eden_test_room",
+                # "content": "eden_test_room",
+                "content": "https://video.didongkj.com/image/cover/4336D37DBCF248009E75A27EC6528A00-6-2.png",
             }
             api_obj.audit_room_report(data, self.token)
 
@@ -73,12 +74,13 @@ class audit(unittest.TestCase):
                 "appSecret": "123456789",
                 "callback": "http://10.113.248.142:9998/platform/test/",
                 "btId": randomValue(10),
-                "partyId": "12345678",
+                "partyId": "12345689",
                 "imgs": [
                     {
-                      "userId": "123456",
-                      "photo": "https://video.didongkj.com/image/cover/4336D37DBCF248009E75A27EC6528A00-6-2.png",
-                      "snapTime": "2020-04-14 19:50:14"
+                        "userId": "123456",
+                      # "photo": "https://video.didongkj.com/image/cover/4336D37DBCF248009E75A27EC6528A00-6-2.png",
+                        "photo": "http://www.xinhuanet.com/photo/18cpcnc/2012-11/15/123959140_11n.jpg",#习近平
+                        "snapTime": "2020-04-14 19:50:14"
                     },
                 ],
             }

@@ -1683,16 +1683,6 @@ def user_updateUserForMark():
     """设置用户为达人"""
     return "/back-http/user/updateUserForMark"
 
-@getRequest
-def videoCommentChkfailPassCheck():
-    """评论审核-不通过审核"""
-    return "/videoCommentChk/failPassCheck"
-
-@getRequest
-def videoCommentChksuccessPassCheck():
-    """评论审核-通过审核"""
-    return "/videoCommentChk/successPassCheck"
-
 @postRequest
 def user_scanQRCodeCard():
     """识别二维码名片"""
@@ -1846,18 +1836,26 @@ def effects_listSubjects():
 @postRequest
 def audit_user_report():
     """审核平台：用户信息上报"""
-    return "/back-http/user/report"
+    return "/audit-center/user/report"
 
 @postRequest
 def audit_room_report():
     """审核平台：酒局上报"""
-    return "/back-http/room/report"
+    return "/audit-center/room/report"
 
 @postRequest
 def audit_live_report():
     """审核平台：酒局直播上报"""
-    return "/back-http/live/report"
+    return "/audit-center/live/report"
 
 @postRequest
 def audit_appInfo_init():
-    return "/back-http/appInfo/init"
+    return "/audit-center/appInfo/init"
+
+@postRequest
+def videoCommentChk_check_wait():
+    return "/back-http/videoCommentChk/check/wait"
+
+@postRequest
+def videoCommentChk_doCheck():
+    return "/back-http/videoCommentChk/doCheck"

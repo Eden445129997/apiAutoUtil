@@ -7,6 +7,7 @@ from src.utils.ODBC import odbc
 from src.testCase.qiaoku import api_obj
 from config.gloVar import globalRides
 # urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+import json
 
 def getPhoneNum():
     """生成手机号码"""
@@ -47,8 +48,7 @@ def login(userPhone,smsCode=None, udid=None):
     }
     # 游客登录
     response = api_obj.login_ykLogin(ykLoginParams)
-    print(response)
-
+    # print(response)
     assert response.get("code") == 200,"状态码错误"
 
     try:
@@ -92,6 +92,7 @@ def login(userPhone,smsCode=None, udid=None):
         getSmsCodeParams["type"] = "1"
         # 获取短信验证码
         response = api_obj.login_getSmsCode(getSmsCodeParams)
+        # print(response)
         assert response.get("code") == 200,"状态码错误"
         return userId,False,udid
 
@@ -105,6 +106,7 @@ def autoLogin(phoneNum):
 
     # 获取redis的smsCode
     smsCode = getSmsCode(phoneNum)
+    time.sleep(1)
     # print(smsCode)
     if smsCode:
         # 处理redis获取的数据提取验证码
@@ -237,7 +239,6 @@ def successPassVideoInitialCheck():
 def failPassVideoInitialCheck():
     """视频审核不通过"""
     data = {
-
         "id":"289",
         "functionOrigin":"101",
         "videoReason":"%E5%A4%AA%E4%B8%91",
@@ -246,6 +247,27 @@ def failPassVideoInitialCheck():
     response = api_obj.videofailPassVideoInitialCheck(data,token)
 
     return True
+
+def autoCheckComment():
+    token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODk3ODY4NTUsImJhY2tfdXNlcl9pZCI6NDMsImlzcyI6InFpYW9rdV9iYWNrIn0.2qblJDRLoN1v7GJNTdp8Y72V-H0EgiH0brjioINR6Bo"
+    while True:
+        data = {
+        }
+        response = api_obj.videoCommentChk_check_wait(data,token)
+        comment_check_list = response.get("data")
+        if comment_check_list:
+            for i in range(len(comment_check_list)):
+                check_id = comment_check_list[i].get("id")
+                # print(type(check_id))
+                dataList = []
+                jsonData = {
+                    "id":"%s"%check_id,
+                    "result":"PASS"
+                }
+                jsonData = json.dumps(jsonData)
+                dataList.append(jsonData)
+
+                api_obj.videoCommentChk_doCheck(dataList,token)
 
 def test():
     """测试推荐接口"""
@@ -286,24 +308,60 @@ def test():
     # print(arraylist)
     # return True
 
+def updateData():
+    # videoDatabase = odbc("qiaoku_video")
+    # biz_id = videoDatabase.selectSQL("select biz_id from tb_back_audit_task where type = '2' and status in (0,1);")[1]
+    # print(biz_id)
+    # for i in range(len(biz_id)):
+    #     videoDatabase.commitSQL("update tb_back_audit_task SET back_user_id = 43,status = 2 where biz_id = '%s';"%biz_id[i][0])
+    #     videoDatabase.commitSQL("UPDATE `qiaoku_video`.`tb_video_comment_chk` SET `machine_chk_status`='2',`risk_label`='审核通过', `reason`='审核通过' where c_id = '%s';"%biz_id[i][0])
+    #     videoDatabase.commitSQL("update tb_video_comment SET chk_status = 3 where c_id = '%s';"%biz_id[i][0])
+    pass
+
+
+# def auth():
+#     userDb = odbc("qiaoku_user")
+#     datalist = userDb.selectSQL("select * from tb_backuser_auth where backuser_id ='39'")
+#     # print(datalist)
+#
+#     j = 549
+#     for i in datalist[1]:
+#         userDb.commitSQL("INSERT INTO `qiaoku_user`.`tb_backuser_auth` (`id`, `backuser_id`, `auth_id`, `role_id`, `enabled`, `create_time`, `last_update_time`) values(%s,44,%s,%s,%s,'2020-01-13 10:20:50','2020-01-13 10:20:50');"%(j,i[2],i[3],i[4]))
+#         j = j+1
+
+def getTokenTxt(token_num):
+    """获取token写入txt文本"""
+    token_list = []
+    for i in range(token_num):
+        phone_num = getPhoneNum()
+        userId,accessToken,udid = autoLogin(phone_num)
+        token_list.append(accessToken)
+    for i in range(len(token_list)):
+        with open (os.path.dirname(os.path.abspath(__file__)) + "\\" + "token.txt", 'a',encoding='utf-8') as fp:
+            fp.write (token_list[i] + "\n")
+            fp.flush()
+            fp.close()
+
 if __name__ == '__main__':
+    # auth()
+    # autoCheckComment()
     # test()
     # 审核通过
-    successPassVideoInitialCheck()
+    # successPassVideoInitialCheck()
     # 审核不通过
     # failPassVideoInitialCheck()
     # 登录
-    # userId,token = login(15361899636)
-    # userId,token = login(15658850486)
+    # userId,token,udid = autoLogin(15361899636)
+    # userId,token,udid = login(15658850486)
 
     # 自动登录
-    # for i in range(100):
-    #     phone_num = getPhoneNum()
-    #     userId,accessToken,udid = autoLogin(phone_num)
-    #     with open (os.path.dirname(os.path.abspath(__file__)) + "\\" + "token.txt", 'a',encoding='utf-8') as fp:
-    #         fp.write (accessToken + "\n")
-    #         fp.flush()
-    #         fp.close()
+    for i in range(100):
+        phone_num = getPhoneNum()
+        userId,accessToken,udid = autoLogin(phone_num)
+        with open (os.path.dirname(os.path.abspath(__file__)) + "\\" + "token.txt", 'a',encoding='utf-8') as fp:
+            fp.write (accessToken + "\n")
+            fp.flush()
+            fp.close()
 
     # print(userId,accessToken)
     # 从数据库获取视频id
@@ -328,4 +386,4 @@ if __name__ == '__main__':
     # addVideoThumbsUp(648474719883886592,5)
     # 给视频评论点赞
     # addVideoCommentThumbsUp(627550301049585664,1)
-    # pass
+    pass

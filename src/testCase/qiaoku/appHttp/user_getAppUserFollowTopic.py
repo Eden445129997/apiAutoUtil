@@ -1,9 +1,5 @@
 import unittest
-import time,datetime
-
-from apiAutoUtil.src.testCase.qiaoku.interfaceObject.app_http import RegisterLoginApi as LoginApi
-from apiAutoUtil.src.testCase.qiaoku.interfaceObject.app_http import UserApi
-
+from src.testCase.qiaoku import api_obj
 
 class user_updateBlackUserList(unittest.TestCase):
     """获取用户关注的话题"""
@@ -12,14 +8,14 @@ class user_updateBlackUserList(unittest.TestCase):
         # 初始化（清理数据库所有的表）
         # deleteData(self.userPhone)
         # date_str = '2017-10-19'
-
         # token
-        self.token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjkwNjI1ODEsInVzZXJJZCI6NjI1MDM4NjEwODg1NzcxMjY0LCJpc3MiOiJxaWFva3UifQ.inNwOa1NFIwpAcESHSFflpuRdTWdOh7j6GSBGwku2Vg"
+        self.token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODg3NDkxMTcsInVzZXJJZCI6NjI3NDcyNDgxMjI5MjA5NjAwLCJ1c2VyUGxhdGZvcm0iOiJhcHAiLCJ1ZGlkIjoibG9naW4iLCJpc3MiOiJxaWFva3UifQ.aq__ldl-l_3KwUvJFJq3r29DUOvgPlddTj8hJ91IdB8"
+
     def test(self):
         pass
 
     def tearDown(self):
-        pass
+        # pass
         # 获取用户关注的话题
         self.a()
 
@@ -27,8 +23,10 @@ class user_updateBlackUserList(unittest.TestCase):
         """获取用户关注的话题"""
         data = {
             # "otherUserId":"618815311222669312",
+            "pageIndex": 1,
+            "pageSize": 10
         }
-        UserApi.getAppUserFollowTopic(data,self.token)
+        api_obj.user_getAppUserFollowTopic(data,self.token)
 
 if __name__ == '__main__':
     unittest.main()

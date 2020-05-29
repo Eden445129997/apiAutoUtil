@@ -38,10 +38,12 @@ def postRequest(func):
             try:
                 # data = json.dumps(data, ensure_ascii=False)
                 data = json.dumps(data)
+                # pass
             except:
                 setLog.info("失败代码：data = json.dumps(data)")
                 setLog.info("失败json序列化参数：" + data)
                 # pass
+
         # 有data并且data不是字典，并且不带token，那我认为data就是token
         elif data and not isinstance(data, dict) and not token:
             headers["token"] = data
@@ -92,7 +94,6 @@ def getRequest(func):
         setLog = log()
         __ip, __port = globalEnvironment()
         url = __ip + __port + func()
-        headers = {}
 
         # 如果有token，则构造token请求头
         if token:

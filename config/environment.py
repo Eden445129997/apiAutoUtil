@@ -106,3 +106,15 @@ def autitEnvironment(func):
         return func(inner_wrapper)
 
     return outter_wrapper
+
+def betaAutitEnvironment(func):
+    def outter_wrapper(*args, **kwargs):
+        @wraps(func)
+        def inner_wrapper(*args, **kwargs):
+            __ip = r"https://betaaudit.didongkj.com"
+            __port = r""
+            return __ip, __port
+
+        return func(inner_wrapper)
+
+    return outter_wrapper
