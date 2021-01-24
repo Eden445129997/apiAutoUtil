@@ -2,18 +2,32 @@
 # -*- coding: utf-8 -*-
 
 from src.utils.Log import log
-from src.utils.GetRequest import merge, splitUrl
+from src.utils.StringUtils import get_dict_by_url,meger_url_with_params
 from config.gloVar import globalEnvironment
-import json
-import requests
+import json, requests
+
 # https警告解除
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 headers = {}
-headers["platform"] = "ios"
-headers["userPlatform"] = "app"
-headers["version"] = "1.0.6"
+
+# po
+# headers["platform"] = "ios"
+# headers["userPlatform"] = "app"
+# headers["version"] = "2.1.0"
+
+# 闪聚
+headers["device"] = "ios"
+headers["version"] = "1.2.9"
+
+# 发送短信验证码
+headers["device-product"] = "1"
+headers["device-model"] = "1"
+headers["device-os-ver"] = "1"
+
+# headers["device"] = "android"
+# headers["version"] = "1.2.2.4"
 
 # Json表单请求装饰器
 def postRequest(func):
@@ -21,7 +35,7 @@ def postRequest(func):
     # 有参post请求，带token
     # 无参post请求
     # 无参post请求，不带token
-    def inner_wrapper(data=None, token=None):
+    def inner_wrapper(data=None, token=None, inner_headers=None):
         setLog = log()
         __ip, __port = globalEnvironment()
         url = __ip + __port + func()
@@ -32,6 +46,9 @@ def postRequest(func):
         if token:
             headers["token"] = token
             headers["auth"] = token
+
+        if inner_headers:
+            headers.update(inner_headers)
 
         # 如果是字典类型，则Json序列化
         if isinstance(data, dict):
@@ -54,7 +71,7 @@ def postRequest(func):
         try:
             # 有参post请求，带/不带token
             if data:
-                response = requests.post(url=url, data=data, headers=headers, verify=False, timeout=10)
+                response = requests.post(url=url, data=data, headers=headers, verify=False, timeout=20)
             # 无参post请求，带/不带token
             else:
                 response = requests.post(url=url, headers=headers, verify=False, timeout=10)
@@ -90,7 +107,7 @@ def getRequest(func):
     # 无参url带token
     # 有参url
     # 有参url带token
-    def inner_wrapper(data=None, token=None):
+    def inner_wrapper(data=None, token=None, inner_headers=None):
         setLog = log()
         __ip, __port = globalEnvironment()
         url = __ip + __port + func()
@@ -100,13 +117,16 @@ def getRequest(func):
             headers["token"] = token
             headers["auth"] = token
 
+        if inner_headers:
+            headers.update(inner_headers)
+
         # 如果data是字典类型，则将data拼接成url
         if isinstance(data, dict):
-            url = merge(url, data)
+            url = meger_url_with_params(url, data)
         # 或者如果data不是字典，并且不带token，那我认为data就是token
         elif data and not token:  # 因为上面有if isinstance(data,dict)，所以这里隐藏带一个条件if not isinstance(data,dict)
             headers["token"] = data
-            # headers["auth"] = data
+            headers["auth"] = data
             data = None
 
         try:
@@ -115,7 +135,7 @@ def getRequest(func):
             if data:
                 response = requests.get(url=url, headers=headers, verify=False, timeout=10)
             else:
-                response = requests.get(url=url, verify=False, timeout=10)
+                response = requests.get(url=url, headers=headers, verify=False, timeout=10)
             response.encoding = "UTF-8"
             result = None
 
@@ -133,12 +153,12 @@ def getRequest(func):
                 # setLog.info(r"接口访问成功，url：" + str(splitUrl(url)[0]))
                 setLog.info(r"接口访问成功，url：" + url)
                 setLog.info(r"请求头：" + str(headers))
-                setLog.info(r"请求参：" + str(splitUrl(url)[1]))
-                # setLog.info(r"响应体：" + str(result))
+                setLog.info(r"请求参：" + str(get_dict_by_url(url)))
+                setLog.info(r"响应体：" + str(result))
         except:
             setLog.error(r"请求失败：" + url)
             setLog.info(r"请求头：" + str(headers))
-            setLog.info(r"请求参：" + str(splitUrl(url)))
+            setLog.info(r"请求参：" + str(get_dict_by_url(url)))
 
     return inner_wrapper
 

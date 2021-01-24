@@ -4,33 +4,15 @@
 from config import environment
 from config import dataBase
 from config import nosqlRedis
-from src.utils.Log import log
 import redis
-
 
 # import pymysql
 
 @environment.testEnvironment
 def globalEnvironment(env):
     """使用装饰器的方式，定义服务器环境"""
-    setLog = log()
     __ip, __port = env()
-
-    # 如果url和port都存在值（True）
-    if __ip and __port:
-        # 尝试ping目标地址
-        # if PingCmd(__ip):
-        #     setLog.info("目标地址可ping通")
-        # else:
-        #     setLog.error("目标地址Ping不通，请确认该环境是否正常")
-        return __ip, __port
-    # 其中一个不存在值，打印日志并返回
-    else:
-        setLog.error("路由寻址失败：")
-        setLog.error("ip:%s" % __ip)
-        setLog.error("port:%s" % __port)
-        return __ip, __port
-
+    return __ip, __port
 
 @dataBase.testEnvironment
 def globalDataBase(env):
@@ -38,7 +20,6 @@ def globalDataBase(env):
     # setLog = log()
     __dataBaseConfig = env()
     return __dataBaseConfig
-
 
 @nosqlRedis.testEnvironment
 def globalRides(env):

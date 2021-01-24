@@ -4,7 +4,7 @@
 import re,time,random,os#,urllib3
 from src.utils.ODBC import odbc
 # from src.utils.Log import log
-from src.testCase.qiaoku import api_obj
+from src.testCase.qiaoku import apiObj
 from config.gloVar import globalRides
 # urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 import json
@@ -20,7 +20,7 @@ def getPhoneNum():
 def getSmsCode(phone):
     """获取验证码"""
     rds,__ = globalRides()
-    token = rds.get("smsCode:%s,app"%phone)
+    token = rds.get("user:smsCode:app-86-%s"%phone)
     # 获取token
     return str(token)
 
@@ -47,7 +47,7 @@ def login(userPhone,smsCode=None, udid=None):
         "udid": udid,
     }
     # 游客登录
-    response = api_obj.login_ykLogin(ykLoginParams)
+    response = apiObj.login_ykLogin(ykLoginParams)
     # print(response)
     assert response.get("code") == 200,"状态码错误"
 
@@ -69,7 +69,7 @@ def login(userPhone,smsCode=None, udid=None):
         checkSmsCodeData["smsCode"] = str(smsCode)
 
         # 验证短信验证码——登录——将touken传入请求头
-        response = api_obj.login_checkSmsCode(checkSmsCodeData,accessToken)
+        response = apiObj.login_checkSmsCode(checkSmsCodeData, accessToken)
         assert response.get("code") == 200,"状态码错误"
         accessToken = response.get("data").get("accessToken")
         return userId,accessToken,udid
@@ -79,19 +79,21 @@ def login(userPhone,smsCode=None, udid=None):
         startCaptchaParams = {
             "userPhone":userPhone,
         }
-        # 极验验证
-        response = api_obj.login_startCaptcha(startCaptchaParams)
+        # 极验初始化
+        response = apiObj.login_startCaptcha(startCaptchaParams)
         assert response.get("code") == 200,"状态码错误"
 
         getSmsCodeParams = {
                 "userPhone":userPhone,
                 "udid": udid,
+                "dialCode":86,
+                # ""
             }
 
         getSmsCodeParams["challenge"] = response.get("data").get("challenge")
         getSmsCodeParams["type"] = "1"
         # 获取短信验证码
-        response = api_obj.login_getSmsCode(getSmsCodeParams)
+        response = apiObj.login_getSmsCode(getSmsCodeParams)
         # print(response)
         assert response.get("code") == 200,"状态码错误"
         return userId,False,udid
@@ -159,7 +161,7 @@ def addVideoThumbsUp(videoId,thumbsUpNum):
             "thumbStatus":"1",
         }
 
-        response = api_obj.videoPlay_addThumbsUp(data,token)
+        response = apiObj.videoPlay_addThumbsUp(data, token)
 
 def addVideoCommentThumbsUp(videoId,thumbsUpNum):
     """给视频下所有评论点赞"""
@@ -189,7 +191,7 @@ def addVideoCommentThumbsUp(videoId,thumbsUpNum):
                 "cId":"%s"%cId,
                 "thumbStatus":"1",
             }
-            api_obj.videoPlay_addCommentThumbsUp(data,token)
+            apiObj.videoPlay_addCommentThumbsUp(data, token)
             # print(cId)
 
 def removePunish(userPhone=None,userId=None):
@@ -232,7 +234,7 @@ def successPassVideoInitialCheck():
     }
     token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODc4MDYwMDUsImJhY2tfdXNlcl9pZCI6NDMsImlzcyI6InFpYW9rdV9iYWNrIn0.zD2II7nLGMSaLev1a2nCD6LJAtsX9eFeYF8-5fYdfwE"
 
-    response = api_obj.videosuccessPassVideoInitialCheck(data,token)
+    response = apiObj.videosuccessPassVideoInitialCheck(data, token)
 
     return True
 
@@ -244,7 +246,7 @@ def failPassVideoInitialCheck():
         "videoReason":"%E5%A4%AA%E4%B8%91",
     }
     token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODM0ODQxOTEsImJhY2tfdXNlcl9pZCI6NDMsImlzcyI6InFpYW9rdV9iYWNrIn0.XZS2M_h9Jmo0gcCjeHGOhgDIX33azObiDj_sIiQrJUM"
-    response = api_obj.videofailPassVideoInitialCheck(data,token)
+    response = apiObj.videofailPassVideoInitialCheck(data, token)
 
     return True
 
@@ -253,7 +255,7 @@ def autoCheckComment():
     while True:
         data = {
         }
-        response = api_obj.videoCommentChk_check_wait(data,token)
+        response = apiObj.videoCommentChk_check_wait(data, token)
         comment_check_list = response.get("data")
         if comment_check_list:
             for i in range(len(comment_check_list)):
@@ -267,7 +269,7 @@ def autoCheckComment():
                 jsonData = json.dumps(jsonData)
                 dataList.append(jsonData)
 
-                api_obj.videoCommentChk_doCheck(dataList,token)
+                apiObj.videoCommentChk_doCheck(dataList, token)
 
 def test():
     """测试推荐接口"""
@@ -287,7 +289,7 @@ def test():
                 "pageSize": 10,
                 "type": "recommend",
             }
-            response = api_obj.video_getVideos(data,token)
+            response = apiObj.video_getVideos(data, token)
             # print(response)
             arraylist = response.get("data")
 
@@ -342,7 +344,20 @@ def getTokenTxt(token_num):
             fp.flush()
             fp.close()
 
+# 627472481229209600
+def getUserVideoChk(user_id):
+    videoDb = odbc("qiaoku_video")
+    chk_id_list =[]
+    video_id_list = videoDb.selectSQL("select video_id from tb_video where user_id ='%s'"%user_id)[1]
+    print(video_id_list)
+    for video_id in video_id_list:
+        chk_id = videoDb.selectSQL("select id from tb_video_chk where video_id ='%s'" % video_id[0])
+        chk_id_list.append(chk_id)
+        print(chk_id)
+    print(chk_id_list)
+
 if __name__ == '__main__':
+    # getUserVideoChk(627472481229209600)
     # auth()
     # autoCheckComment()
     # test()
@@ -352,16 +367,19 @@ if __name__ == '__main__':
     # failPassVideoInitialCheck()
     # 登录
     # userId,token,udid = autoLogin(15361899636)
-    # userId,token,udid = login(15658850486)
+    # userId,token,udid = login(15361899636,1111)
+    # print(token)
 
     # 自动登录
-    for i in range(100):
-        phone_num = getPhoneNum()
-        userId,accessToken,udid = autoLogin(phone_num)
-        with open (os.path.dirname(os.path.abspath(__file__)) + "\\" + "token.txt", 'a',encoding='utf-8') as fp:
-            fp.write (accessToken + "\n")
-            fp.flush()
-            fp.close()
+    # for i in range(30):
+    #     phone_num = getPhoneNum()
+    #     userId,accessToken,udid = autoLogin(phone_num)
+    #     with open (os.path.dirname(os.path.abspath(__file__)) + "//" + "token.txt", 'a',encoding='utf-8') as fp:
+    #         fp.write (accessToken + "\n")
+    #         fp.flush()
+    #         fp.close()
+
+    # print(os.path.dirname(os.path.abspath(__file__)))
 
     # print(userId,accessToken)
     # 从数据库获取视频id
@@ -377,8 +395,8 @@ if __name__ == '__main__':
     # getUserId()
 
     # 获取验证码
-    # smsCode = getSmsCode(15361899636)
-    # print(smsCode)
+    smsCode = getSmsCode(15361899636)
+    print(smsCode)
 
     # 账号解封
     # removePunish(userPhone=15658850486,userId=None)

@@ -8,6 +8,8 @@ from src.utils.ParserMethod import parserMethod
 from config.gloVar import globalRides
 import time
 
+# raise KeyboardInterrupt
+
 def rmToken(userId):
     """根据userId删除token"""
     rds,__ = globalRides()

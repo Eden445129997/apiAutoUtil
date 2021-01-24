@@ -1,0 +1,78 @@
+1606456735729	geckodriver	INFO	Listening on 127.0.0.1:51033
+1606456736145	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/l7/_f5f2c2x545_dy3vdd8wc1t00000gn/T/rust_mozprofile8JycwN"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1606456738290	Marionette	INFO	Listening on port 51046
+1606456738329	Marionette	WARN	TLS certificate errors will be ignored for this session
+1606456742055	Marionette	INFO	Stopped listening on port 51046
+1606457293837	geckodriver	INFO	Listening on 127.0.0.1:51385
+1606457294793	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/l7/_f5f2c2x545_dy3vdd8wc1t00000gn/T/rust_mozprofileg6g1Vt"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1606457296713	Marionette	INFO	Listening on port 51396
+1606457296764	Marionette	WARN	TLS certificate errors will be ignored for this session
+1606457309917	Marionette	INFO	Stopped listening on port 51396
+1606459583303	geckodriver	INFO	Listening on 127.0.0.1:53733
+1606459584314	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/l7/_f5f2c2x545_dy3vdd8wc1t00000gn/T/rust_mozprofile8GPbH9"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1606459586570	Marionette	INFO	Listening on port 53752
+1606459586609	Marionette	WARN	TLS certificate errors will be ignored for this session
+1606459608422	Marionette	INFO	Stopped listening on port 53752
+1606459612835	geckodriver	INFO	Listening on 127.0.0.1:53918
+1606459613848	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/l7/_f5f2c2x545_dy3vdd8wc1t00000gn/T/rust_mozprofileu7MTRr"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1606459615746	Marionette	INFO	Listening on port 53933
+1606459615829	Marionette	WARN	TLS certificate errors will be ignored for this session
+1606459629406	Marionette	INFO	Stopped listening on port 53933
+1606460046499	geckodriver	INFO	Listening on 127.0.0.1:55828
+1606460047511	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/l7/_f5f2c2x545_dy3vdd8wc1t00000gn/T/rust_mozprofile73bN4h"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1606460049516	Marionette	INFO	Listening on port 55843
+1606460049595	Marionette	WARN	TLS certificate errors will be ignored for this session
+1606460165737	geckodriver	INFO	Listening on 127.0.0.1:56396
+1606460166747	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/l7/_f5f2c2x545_dy3vdd8wc1t00000gn/T/rust_mozprofileu9fRnD"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1606460168768	Marionette	INFO	Listening on port 56411
+1606460168823	Marionette	WARN	TLS certificate errors will be ignored for this session
+1606460185214	Marionette	INFO	Stopped listening on port 56411
+1606460396853	geckodriver	INFO	Listening on 127.0.0.1:57403
+1606460397865	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/l7/_f5f2c2x545_dy3vdd8wc1t00000gn/T/rust_mozprofileAcZW2m"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1606460399867	Marionette	INFO	Listening on port 57418
+1606460399938	Marionette	WARN	TLS certificate errors will be ignored for this session
+1606460409190	Marionette	INFO	Stopped listening on port 57418
+1606460588936	geckodriver	INFO	Listening on 127.0.0.1:58257
+1606460588943	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/l7/_f5f2c2x545_dy3vdd8wc1t00000gn/T/rust_mozprofile8vvDL8"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1606460590851	Marionette	INFO	Listening on port 58266
+1606460590916	Marionette	WARN	TLS certificate errors will be ignored for this session
+1606460599510	Marionette	INFO	Stopped listening on port 58266
+1606460625594	geckodriver	INFO	Listening on 127.0.0.1:58464
+1606460626605	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/l7/_f5f2c2x545_dy3vdd8wc1t00000gn/T/rust_mozprofileumLPtU"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1606460628546	Marionette	INFO	Listening on port 58479
+1606460628594	Marionette	WARN	TLS certificate errors will be ignored for this session
+1606460639829	Marionette	INFO	Stopped listening on port 58479
+1606460735882	geckodriver	INFO	Listening on 127.0.0.1:58988
+1606460736898	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/l7/_f5f2c2x545_dy3vdd8wc1t00000gn/T/rust_mozprofilebjW79j"
+2020-11-27 15:05:37.470 firefox-bin[17292:9029074] imkxpc_getApplicationProperty:reply: called with incorrect property value 4, bailing.
+2020-11-27 15:05:37.470 firefox-bin[17292:9029074] Text input context does not respond to _valueForTIProperty:
+2020-11-27 15:05:37.470 firefox-bin[17292:9029074] imkxpc_getApplicationProperty:reply: called with incorrect property value 4, bailing.
+2020-11-27 15:05:37.470 firefox-bin[17292:9029074] Text input context does not respond to _valueForTIProperty:
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1606460738909	Marionette	INFO	Listening on port 59004
+1606460738983	Marionette	WARN	TLS certificate errors will be ignored for this session
+2020-11-27 15:05:39.123 firefox-bin[17156:9020815] imkxpc_getApplicationProperty:reply: called with incorrect property value 4, bailing.
+2020-11-27 15:05:39.123 firefox-bin[17156:9020815] Text input context does not respond to _valueForTIProperty:
+2020-11-27 15:05:39.143 firefox-bin[17156:9020815] imkxpc_getApplicationProperty:reply: called with incorrect property value 4, bailing.
+2020-11-27 15:05:39.143 firefox-bin[17156:9020815] Text input context does not respond to _valueForTIProperty:
+2020-11-27 15:05:39.143 firefox-bin[17156:9020815] imkxpc_getApplicationProperty:reply: called with incorrect property value 4, bailing.
+2020-11-27 15:05:39.143 firefox-bin[17156:9020815] Text input context does not respond to _valueForTIProperty:
+2020-11-27 15:05:41.536 firefox-bin[17156:9020815] imkxpc_getApplicationProperty:reply: called with incorrect property value 4, bailing.
+2020-11-27 15:05:41.536 firefox-bin[17156:9020815] Text input context does not respond to _valueForTIProperty:
+2020-11-27 15:05:42.025 firefox-bin[17156:9020815] imkxpc_getApplicationProperty:reply: called with incorrect property value 4, bailing.
+2020-11-27 15:05:42.025 firefox-bin[17156:9020815] Text input context does not respond to _valueForTIProperty:
+2020-11-27 15:05:47.087 firefox-bin[17292:9029074] imkxpc_getApplicationProperty:reply: called with incorrect property value 4, bailing.
+2020-11-27 15:05:47.087 firefox-bin[17292:9029074] Text input context does not respond to _valueForTIProperty:
+1606460749291	Marionette	INFO	Stopped listening on port 59004
+2020-11-27 15:08:46.381 firefox-bin[17156:9020815] imkxpc_getApplicationProperty:reply: called with incorrect property value 4, bailing.
+2020-11-27 15:08:46.381 firefox-bin[17156:9020815] Text input context does not respond to _valueForTIProperty:
+1606460928343	Marionette	INFO	Stopped listening on port 55843

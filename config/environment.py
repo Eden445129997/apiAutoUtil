@@ -23,14 +23,12 @@ def PingCmd(ip):
             return True
     return False
 
-
-
 # 本地环境装饰器
 def betaEnvironment(func):
     def outter_wrapper(*args, **kwargs):
         @wraps(func)
         def inner_wrapper(*args, **kwargs):
-            __ip = r"https://beta.didongkj.com"
+            __ip = r"https://newbetaadmin.didongkj.com"
             __port = r""
             return __ip, __port
 
@@ -38,80 +36,30 @@ def betaEnvironment(func):
 
     return outter_wrapper
 
-
-# 本地环境装饰器
-def localhostEnvironment(func):
-    def outter_wrapper(*args, **kwargs):
-        @wraps(func)
-        def inner_wrapper(*args, **kwargs):
-            __ip = r"http://47.105.175.129"
-            __port = r":8802"
-            return __ip, __port
-
-        return func(inner_wrapper)
-
-    return outter_wrapper
-
-
-# 生产环境装饰器
-def productionEnvironment(func):
-    def outter_wrapper(*args, **kwargs):
-        @wraps(func)
-        def inner_wrapper(*args, **kwargs):
-            __ip = r"http://10.113.248.204"
-            __port = r":8801"
-            return __ip, __port
-
-        return func(inner_wrapper)
-
-    return outter_wrapper
-
-
 # 测试环境装饰器
 def testEnvironment(func):
     def outter_wrapper(*args, **kwargs):
         @wraps(func)
         def inner_wrapper(*args, **kwargs):
-            __ip = r"http://10.113.248.203"
-            __port = r":80"
+            # 线上环境
+            # __ip = r"https://shanjuapi.yuming11.com"
+            # 测试
+            __ip = r"http://10.113.248.196"
+            # beta
+            # __ip = r"https://betaapi.yuming11.com"
+            __port = r""
             return __ip, __port
 
         return func(inner_wrapper)
 
     return outter_wrapper
 
-
-# 小目标的服务器
-def xiaomubiaoEnvironment(func):
+# 旺环境装饰器
+def wangEnvironment(func):
     def outter_wrapper(*args, **kwargs):
         @wraps(func)
         def inner_wrapper(*args, **kwargs):
-            __ip = r"http://10.113.248.86"
-            __port = r":7786"
-            return __ip, __port
-
-        return func(inner_wrapper)
-
-    return outter_wrapper
-
-
-def autitEnvironment(func):
-    def outter_wrapper(*args, **kwargs):
-        @wraps(func)
-        def inner_wrapper(*args, **kwargs):
-            __ip = r"http://10.113.248.209"
-            __port = r":80"
-            return __ip, __port
-
-        return func(inner_wrapper)
-
-    return outter_wrapper
-
-def betaAutitEnvironment(func):
-    def outter_wrapper(*args, **kwargs):
-        @wraps(func)
-        def inner_wrapper(*args, **kwargs):
-            __ip = r"https://betaaudit.didongkj.com"
+            __ip = r"http://10.113.248.63"
             __port = r""
             return __ip, __port
 

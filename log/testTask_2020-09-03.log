@@ -1,0 +1,16 @@
+2020-09-03 19:04:51,671 INFO    :接口访问成功，url：https://betaapi.yuming11.com/api-user/v1/user/send/smscode
+2020-09-03 19:04:51,672 INFO    :请求头：{'device': 'ios', 'version': '1.2.9', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'Content-Type': 'application/json;charset=utf-8', 'token': '0beb1ff21ffb4008b18228c317100910', 'auth': '0beb1ff21ffb4008b18228c317100910'}
+2020-09-03 19:04:51,672 INFO    :请求体：{"phone": "15361899636", "smsType": 1}
+2020-09-03 19:04:51,673 INFO    :响应体：{'code': 9001, 'msg': '传输数据解密出错', 'result': {}}
+2020-09-03 19:05:04,334 INFO    :接口访问成功，url：https://betaapi.yuming11.com/api-user/v1/user/login/phone
+2020-09-03 19:05:04,334 INFO    :请求头：{'device': 'ios', 'version': '1.2.9', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'Content-Type': 'application/json;charset=utf-8', 'token': '0beb1ff21ffb4008b18228c317100910', 'auth': '0beb1ff21ffb4008b18228c317100910'}
+2020-09-03 19:05:04,335 INFO    :请求体：{"phone": "15361899636", "smsCode": "123456", "deviceId": "tester_eden"}
+2020-09-03 19:05:04,335 INFO    :响应体：{'code': 9001, 'msg': '传输数据解密出错', 'result': {}}
+2020-09-03 19:05:46,663 INFO    :接口访问成功，url：https://betaapi.yuming11.com/api-user/v1/user/send/smscode
+2020-09-03 19:05:46,663 INFO    :请求头：{'device': 'ios', 'version': '1.2.9', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'Content-Type': 'application/json;charset=utf-8', 'token': '0beb1ff21ffb4008b18228c317100910', 'auth': '0beb1ff21ffb4008b18228c317100910'}
+2020-09-03 19:05:46,664 INFO    :请求体：{"phone": "15361899636", "smsType": 1}
+2020-09-03 19:05:46,664 INFO    :响应体：{'code': 200, 'msg': 'SUCCESS', 'result': {}}
+2020-09-03 19:06:15,931 INFO    :接口访问成功，url：https://betaapi.yuming11.com/api-user/v1/user/login/phone
+2020-09-03 19:06:15,932 INFO    :请求头：{'device': 'ios', 'version': '1.2.9', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'Content-Type': 'application/json;charset=utf-8', 'token': '0beb1ff21ffb4008b18228c317100910', 'auth': '0beb1ff21ffb4008b18228c317100910'}
+2020-09-03 19:06:15,933 INFO    :请求体：{"phone": "15361899636", "smsCode": "038510", "deviceId": "tester_eden"}
+2020-09-03 19:06:15,933 INFO    :响应体：{'code': 200, 'msg': 'SUCCESS', 'result': {'rongToken': 'N3QCKgQnwJO90BLFh582R8oDoM9ST47yXMruUtrFOxs=@ip7n.cn.rongnav.com;ip7n.cn.rongcfg.com', 'gender': 1, 'level': 0, 'avatar': '', 'userId': 487796, 'userCode': 487796, 'token': 'aa03f5bde1554cbaac903db071768ee1', 'phone': '15361899636', 'showFun': 1, 'nickname': 'eden', 'age': 0, 'isRegister': 0, 'status': 0}}

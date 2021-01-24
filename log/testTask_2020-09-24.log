@@ -1,0 +1,76 @@
+2020-09-24 15:32:39,868 INFO    :接口访问成功，url：https://betaapi.yuming11.com/api-user/v1/sys/last/version
+2020-09-24 15:32:39,868 INFO    :请求头：{'device': 'ios', 'version': '1.2.10', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'Content-Type': 'application/json;charset=utf-8', 'token': '0beb1ff21ffb4008b18228c317100910', 'auth': '0beb1ff21ffb4008b18228c317100910'}
+2020-09-24 15:32:39,869 INFO    :请求体：{}
+2020-09-24 15:32:39,869 INFO    :响应体：{'code': 200, 'msg': 'SUCCESS', 'result': {'versionNo': '1.2.12', 'updateStatus': 2, 'downloadUrl': 'https://www.baidu.com', 'intro': '1.2.12'}}
+2020-09-24 15:33:03,399 INFO    :接口访问成功，url：https://betaapi.yuming11.com/api-user/v1/sys/last/version
+2020-09-24 15:33:03,400 INFO    :请求头：{'device': 'ios', 'version': '1.2.12', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'Content-Type': 'application/json;charset=utf-8', 'token': '0beb1ff21ffb4008b18228c317100910', 'auth': '0beb1ff21ffb4008b18228c317100910'}
+2020-09-24 15:33:03,400 INFO    :请求体：{}
+2020-09-24 15:33:03,401 INFO    :响应体：{'code': 200, 'msg': 'SUCCESS', 'result': {'versionNo': '1.2.12', 'updateStatus': 0, 'downloadUrl': 'https://www.baidu.com', 'intro': '1.2.12'}}
+2020-09-24 15:33:11,824 INFO    :接口访问成功，url：https://betaapi.yuming11.com/api-user/v1/sys/last/version
+2020-09-24 15:33:11,824 INFO    :请求头：{'device': 'ios', 'version': '1.2.10', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'Content-Type': 'application/json;charset=utf-8', 'token': '0beb1ff21ffb4008b18228c317100910', 'auth': '0beb1ff21ffb4008b18228c317100910'}
+2020-09-24 15:33:11,825 INFO    :请求体：{}
+2020-09-24 15:33:11,825 INFO    :响应体：{'code': 200, 'msg': 'SUCCESS', 'result': {'versionNo': '1.2.12', 'updateStatus': 2, 'downloadUrl': 'https://www.baidu.com', 'intro': '1.2.12'}}
+2020-09-24 16:49:11,230 INFO    :接口访问成功，url：https://betaapi.yuming11.com/api-user/v1/sys/last/version
+2020-09-24 16:49:11,231 INFO    :请求头：{'device': 'android', 'version': '1.2.2.9', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'Content-Type': 'application/json;charset=utf-8', 'token': '0beb1ff21ffb4008b18228c317100910', 'auth': '0beb1ff21ffb4008b18228c317100910'}
+2020-09-24 16:49:11,232 INFO    :请求体：{}
+2020-09-24 16:49:11,232 INFO    :响应体：{'code': 200, 'msg': 'SUCCESS', 'result': {'versionNo': '', 'updateStatus': 0, 'downloadUrl': '', 'intro': ''}}
+2020-09-24 16:49:30,386 INFO    :接口访问成功，url：https://betaapi.yuming11.com/api-user/v1/sys/last/version
+2020-09-24 16:49:30,386 INFO    :请求头：{'device': 'android', 'version': '1.2.2.9', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'Content-Type': 'application/json;charset=utf-8', 'token': '0beb1ff21ffb4008b18228c317100910', 'auth': '0beb1ff21ffb4008b18228c317100910'}
+2020-09-24 16:49:30,387 INFO    :请求体：{}
+2020-09-24 16:49:30,387 INFO    :响应体：{'code': 200, 'msg': 'SUCCESS', 'result': {'versionNo': '', 'updateStatus': 0, 'downloadUrl': '', 'intro': ''}}
+2020-09-24 16:50:39,034 INFO    :接口访问成功，url：https://betaapi.yuming11.com/api-user/v1/sys/last/version
+2020-09-24 16:50:39,035 INFO    :请求头：{'device': 'android', 'version': '1.2.2.9', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'Content-Type': 'application/json;charset=utf-8', 'token': '0beb1ff21ffb4008b18228c317100910', 'auth': '0beb1ff21ffb4008b18228c317100910'}
+2020-09-24 16:50:39,035 INFO    :请求体：{}
+2020-09-24 16:50:39,036 INFO    :响应体：{'code': 200, 'msg': 'SUCCESS', 'result': {'versionNo': '', 'updateStatus': 0, 'downloadUrl': '', 'intro': ''}}
+2020-09-24 17:08:20,520 INFO    :接口访问成功，url：https://betaapi.yuming11.com/api-user/v1/sys/last/version
+2020-09-24 17:08:20,521 INFO    :请求头：{'device': 'android', 'version': '1.2.2.9', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'Content-Type': 'application/json;charset=utf-8', 'token': '0beb1ff21ffb4008b18228c317100910', 'auth': '0beb1ff21ffb4008b18228c317100910'}
+2020-09-24 17:08:20,522 INFO    :请求体：{}
+2020-09-24 17:08:20,522 INFO    :响应体：{'code': 200, 'msg': 'SUCCESS', 'result': {'versionNo': '1.2.12', 'updateStatus': 2, 'downloadUrl': 'https://dingdong-yuming.yuming11.com/appfile/20200924164739/com.ju.shanju.app.GZApplication_v1.2.12.apk', 'intro': ''}}
+2020-09-24 17:08:45,551 INFO    :接口访问成功，url：https://betaapi.yuming11.com/api-user/v1/sys/last/version
+2020-09-24 17:08:45,551 INFO    :请求头：{'device': 'android', 'version': '1.2.12', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'Content-Type': 'application/json;charset=utf-8', 'token': '0beb1ff21ffb4008b18228c317100910', 'auth': '0beb1ff21ffb4008b18228c317100910'}
+2020-09-24 17:08:45,552 INFO    :请求体：{}
+2020-09-24 17:08:45,552 INFO    :响应体：{'code': 200, 'msg': 'SUCCESS', 'result': {'versionNo': '1.2.12', 'updateStatus': 2, 'downloadUrl': 'https://dingdong-yuming.yuming11.com/appfile/20200924164739/com.ju.shanju.app.GZApplication_v1.2.12.apk', 'intro': ''}}
+2020-09-24 17:09:22,688 INFO    :接口访问成功，url：https://betaapi.yuming11.com/api-user/v1/sys/last/version
+2020-09-24 17:09:22,689 INFO    :请求头：{'device': 'android', 'version': '1.2.12', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'Content-Type': 'application/json;charset=utf-8', 'token': '0beb1ff21ffb4008b18228c317100910', 'auth': '0beb1ff21ffb4008b18228c317100910'}
+2020-09-24 17:09:22,690 INFO    :请求体：{}
+2020-09-24 17:09:22,690 INFO    :响应体：{'code': 200, 'msg': 'SUCCESS', 'result': {'versionNo': '1.2.12', 'updateStatus': 2, 'downloadUrl': 'https://dingdong-yuming.yuming11.com/appfile/20200924164739/com.ju.shanju.app.GZApplication_v1.2.12.apk', 'intro': ''}}
+2020-09-24 17:10:30,525 INFO    :接口访问成功，url：http://10.113.248.196/api-user/v1/sys/last/version
+2020-09-24 17:10:30,525 INFO    :请求头：{'device': 'android', 'version': '1.2.12', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'Content-Type': 'application/json;charset=utf-8', 'token': '0beb1ff21ffb4008b18228c317100910', 'auth': '0beb1ff21ffb4008b18228c317100910'}
+2020-09-24 17:10:30,526 INFO    :请求体：{}
+2020-09-24 17:10:30,526 INFO    :响应体：{'code': 200, 'msg': 'SUCCESS', 'result': {'versionNo': '1.2.12', 'updateStatus': 2, 'downloadUrl': 'https://dingdong-yuming.yuming11.com/appfile/20200811170539/com.ju.shanju.app.GZApplication_v1.2.2.5.apk', 'intro': '嘿嘿嘿'}}
+2020-09-24 17:15:38,825 INFO    :接口访问成功，url：http://10.113.248.196/api-user/v1/sys/last/version
+2020-09-24 17:15:38,826 INFO    :请求头：{'device': 'android', 'version': '1.2.2.9', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'Content-Type': 'application/json;charset=utf-8', 'token': '0beb1ff21ffb4008b18228c317100910', 'auth': '0beb1ff21ffb4008b18228c317100910'}
+2020-09-24 17:15:38,827 INFO    :请求体：{}
+2020-09-24 17:15:38,827 INFO    :响应体：{'code': 200, 'msg': 'SUCCESS', 'result': {'versionNo': '1.2.12', 'updateStatus': 2, 'downloadUrl': 'https://dingdong-yuming.yuming11.com/appfile/20200811170539/com.ju.shanju.app.GZApplication_v1.2.2.5.apk', 'intro': '嘿嘿嘿'}}
+2020-09-24 17:15:48,601 INFO    :接口访问成功，url：http://10.113.248.196/api-user/v1/sys/last/version
+2020-09-24 17:15:48,601 INFO    :请求头：{'device': 'android', 'version': '1.2.12', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'Content-Type': 'application/json;charset=utf-8', 'token': '0beb1ff21ffb4008b18228c317100910', 'auth': '0beb1ff21ffb4008b18228c317100910'}
+2020-09-24 17:15:48,602 INFO    :请求体：{}
+2020-09-24 17:15:48,602 INFO    :响应体：{'code': 200, 'msg': 'SUCCESS', 'result': {'versionNo': '1.2.12', 'updateStatus': 2, 'downloadUrl': 'https://dingdong-yuming.yuming11.com/appfile/20200811170539/com.ju.shanju.app.GZApplication_v1.2.2.5.apk', 'intro': '嘿嘿嘿'}}
+2020-09-24 17:16:00,465 INFO    :接口访问成功，url：http://10.113.248.196/api-user/v1/sys/last/version
+2020-09-24 17:16:00,466 INFO    :请求头：{'device': 'ios', 'version': '1.2.12', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'Content-Type': 'application/json;charset=utf-8', 'token': '0beb1ff21ffb4008b18228c317100910', 'auth': '0beb1ff21ffb4008b18228c317100910'}
+2020-09-24 17:16:00,466 INFO    :请求体：{}
+2020-09-24 17:16:00,467 INFO    :响应体：{'code': 200, 'msg': 'SUCCESS', 'result': {'versionNo': '1.2.10', 'updateStatus': 0, 'downloadUrl': 'www.baidu.com', 'intro': '1.2.10'}}
+2020-09-24 17:17:24,268 INFO    :接口访问成功，url：http://10.113.248.196/api-user/v1/sys/last/version
+2020-09-24 17:17:24,269 INFO    :请求头：{'device': 'android', 'version': '1.2.2.9', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'Content-Type': 'application/json;charset=utf-8', 'token': '0beb1ff21ffb4008b18228c317100910', 'auth': '0beb1ff21ffb4008b18228c317100910'}
+2020-09-24 17:17:24,270 INFO    :请求体：{}
+2020-09-24 17:17:24,270 INFO    :响应体：{'code': 200, 'msg': 'SUCCESS', 'result': {'versionNo': '1.2.12', 'updateStatus': 2, 'downloadUrl': 'https://dingdong-yuming.yuming11.com/appfile/20200811170539/com.ju.shanju.app.GZApplication_v1.2.2.5.apk', 'intro': '嘿嘿嘿'}}
+2020-09-24 17:17:31,370 INFO    :接口访问成功，url：http://10.113.248.196/api-user/v1/sys/last/version
+2020-09-24 17:17:31,371 INFO    :请求头：{'device': 'android', 'version': '1.2.12', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'Content-Type': 'application/json;charset=utf-8', 'token': '0beb1ff21ffb4008b18228c317100910', 'auth': '0beb1ff21ffb4008b18228c317100910'}
+2020-09-24 17:17:31,372 INFO    :请求体：{}
+2020-09-24 17:17:31,372 INFO    :响应体：{'code': 200, 'msg': 'SUCCESS', 'result': {'versionNo': '1.2.12', 'updateStatus': 2, 'downloadUrl': 'https://dingdong-yuming.yuming11.com/appfile/20200811170539/com.ju.shanju.app.GZApplication_v1.2.2.5.apk', 'intro': '嘿嘿嘿'}}
+2020-09-24 17:17:37,897 INFO    :接口访问成功，url：http://10.113.248.196/api-user/v1/sys/last/version
+2020-09-24 17:17:37,898 INFO    :请求头：{'device': 'android', 'version': '1.2.2.9', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'Content-Type': 'application/json;charset=utf-8', 'token': '0beb1ff21ffb4008b18228c317100910', 'auth': '0beb1ff21ffb4008b18228c317100910'}
+2020-09-24 17:17:37,899 INFO    :请求体：{}
+2020-09-24 17:17:37,899 INFO    :响应体：{'code': 200, 'msg': 'SUCCESS', 'result': {'versionNo': '1.2.12', 'updateStatus': 2, 'downloadUrl': 'https://dingdong-yuming.yuming11.com/appfile/20200811170539/com.ju.shanju.app.GZApplication_v1.2.2.5.apk', 'intro': '嘿嘿嘿'}}
+2020-09-24 17:19:04,712 INFO    :接口访问成功，url：http://10.113.248.196/api-user/v1/sys/last/version
+2020-09-24 17:19:04,713 INFO    :请求头：{'device': 'android', 'version': '1.2.12', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'Content-Type': 'application/json;charset=utf-8', 'token': '0beb1ff21ffb4008b18228c317100910', 'auth': '0beb1ff21ffb4008b18228c317100910'}
+2020-09-24 17:19:04,714 INFO    :请求体：{}
+2020-09-24 17:19:04,714 INFO    :响应体：{'code': 200, 'msg': 'SUCCESS', 'result': {'versionNo': '1.2.12', 'updateStatus': 2, 'downloadUrl': 'https://dingdong-yuming.yuming11.com/appfile/20200811170539/com.ju.shanju.app.GZApplication_v1.2.2.5.apk', 'intro': '嘿嘿嘿'}}
+2020-09-24 17:19:06,773 INFO    :接口访问成功，url：http://10.113.248.196/api-user/v1/sys/last/version
+2020-09-24 17:19:06,774 INFO    :请求头：{'device': 'android', 'version': '1.2.12', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'Content-Type': 'application/json;charset=utf-8', 'token': '0beb1ff21ffb4008b18228c317100910', 'auth': '0beb1ff21ffb4008b18228c317100910'}
+2020-09-24 17:19:06,774 INFO    :请求体：{}
+2020-09-24 17:19:06,775 INFO    :响应体：{'code': 200, 'msg': 'SUCCESS', 'result': {'versionNo': '1.2.12', 'updateStatus': 2, 'downloadUrl': 'https://dingdong-yuming.yuming11.com/appfile/20200811170539/com.ju.shanju.app.GZApplication_v1.2.2.5.apk', 'intro': '嘿嘿嘿'}}
+2020-09-24 19:13:09,691 INFO    :接口访问成功，url：http://10.113.248.196/api-user/v1/sys/last/version
+2020-09-24 19:13:09,693 INFO    :请求头：{'device': 'android', 'version': '1.2.12', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'Content-Type': 'application/json;charset=utf-8', 'token': '0beb1ff21ffb4008b18228c317100910', 'auth': '0beb1ff21ffb4008b18228c317100910'}
+2020-09-24 19:13:09,693 INFO    :请求体：{}
+2020-09-24 19:13:09,693 INFO    :响应体：{'code': 200, 'msg': 'SUCCESS', 'result': {'versionNo': '', 'updateStatus': 0, 'downloadUrl': '', 'intro': ''}}

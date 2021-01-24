@@ -56,6 +56,10 @@ class excuteTask():
     def buildTask(self, caseName="*", reportName="TestReport_", reportTitle="自动化测试报告", tester="Eden"):
         # html文件
         html = path.reportPath() + reportName + self.now + ".html"
+        testCasePath = path.testCasePath() + "main/"
+        testFile = caseName + ".py"
+
+        print(testCasePath)
 
         # 创建将报告写入的文件对象
         fp = open(html, "wb")
@@ -64,7 +68,9 @@ class excuteTask():
         runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title=reportTitle, tester=tester)
 
         # 批量导入测试用例进测试套件中
-        suit = unittest.defaultTestLoader.discover(path.testCasePath() + "\\main", caseName + ".py")
+        # suit = unittest.defaultTestLoader.discover(path.testCasePath() + "main\\", caseName + ".py")
+        suit = unittest.defaultTestLoader.discover(testCasePath, testFile)
+        print(suit._tests)
 
         # 执行套件生成报告
         runner.run(suit)
@@ -72,7 +78,7 @@ class excuteTask():
         fp.flush()
         fp.close()
 
-        self.send_email('445129997@qq.com', html)
+        # self.send_email('445129997@qq.com', html)
 
 
 if __name__ == '__main__':
